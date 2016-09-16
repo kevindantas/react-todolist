@@ -8,6 +8,9 @@
     box-shadow: 1px 2px 5px rgba(0,0,0,.2);
     will-change: box-shadow;
     transition: box-shadow 0.3s ease-in;
+    padding-left: 40px;
+    background: #fff url(SearchIcon.svg) no-repeat;
+    background-position: 10px;
 }
 
 .search-form input:hover,
