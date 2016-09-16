@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import './SearchField.css';
+import '../css/SearchField.css';
 
 /**
  * Icone e input para pesquisar

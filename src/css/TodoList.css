@@ -1,0 +1,17 @@
+.todo-list {
+    color: #4E5558;
+    padding: 8px;
+    list-style: none;
+    text-align: left;
+}
+
+.todo-list li {
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.todo-list li.is-done {
+    color: #6FCC8A;
+    text-decoration: line-through;
+}
+

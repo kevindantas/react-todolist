@@ -1,0 +1,14 @@
+.todo-card {
+    background: #fff;
+    width: 420px;
+    float: left;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 10px 1px rgba(0,0,0,.15);
+}
+
+.todo-card h2 {
+    padding: 8px;
+}
