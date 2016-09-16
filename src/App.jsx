@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import SearchField from './components/SearchField';
+
+import Menu from './components/Menu';
+
 
 /**
  * Componente principal que está sendo renderizado
@@ -13,10 +15,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <nav className="navbar">
-          <h3 className="logo">ToDo List</h3>
-        </nav>
-        <SearchField />
+        <Menu />
+        <main>
+          { this.props.children }
+        </main>
       </div>
     );
   }
