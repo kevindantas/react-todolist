@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Card from './Card';
 
 import SearchField from '../components/SearchField';
+import Fab from '../components/Fab';
+
 
 class GridCard extends Component {
 
@@ -76,6 +78,8 @@ class GridCard extends Component {
 
         { this.renderCards() }
 
+
+        <Fab />
       </div>
     );
   }

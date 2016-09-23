@@ -1,0 +1,22 @@
+.fab {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 1000px;
+    font-size: 32px;
+    color: #fff;
+    outline: none;
+    background: #EB5850;
+    box-shadow: 1px 3px 5px rgba(0,0,0,.2);
+    transition: 0.2s ease-out;
+    will-change: box-shadow;
+}
+
+
+.fab:hover,
+.fab:focus {
+    box-shadow: 1px 4px 12px rgba(0,0,0,.4);
+}
