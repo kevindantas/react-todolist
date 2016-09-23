@@ -15,9 +15,21 @@ class GridCard extends Component {
 
     // Declara um valor padrão para o state todos que estamos usando
     this.state = {
-      todos: []
+      todos: [],
+      search: ''
     }
   }
+
+
+
+  handleSearch(value) {
+    this.setState({
+      search: value.toLowerCase()
+    })
+  }
+
+
+
 
   /**
    * Renderiza os nossos Cards
@@ -25,7 +37,18 @@ class GridCard extends Component {
    * @returns {Array}
    */
   renderCards() {
-    return this.state.todos.map(todo => {
+
+    // A função .indexOf pesquisa a ocorrência de um caracter em uma string
+    // Retorna um inteiro
+    //   -1 para caso não ache nenhuma ocorrência
+    //   Ou o indice daquela ocorrencia
+    // Ex.:
+    //   var a = 'abcdefgh';
+    //   a.indexOf('c'); // retorna 2 (0 = a, 1, = b, 2 = c)
+
+    return this.state.todos.filter(todo => {
+      return todo.titulo.toLocaleLowerCase().indexOf(this.state.search) > -1;
+    }).map(todo => {
       return <Card key={todo.id} todo={todo} />
     });
   }
@@ -47,7 +70,9 @@ class GridCard extends Component {
   render() {
     return (
       <div>
-        <SearchField placeholder="Pesquisar tarefa..." />
+        <SearchField
+          handleSearch={this.handleSearch.bind(this)}
+          placeholder="Pesquisar tarefa..." />
 
         { this.renderCards() }
 
