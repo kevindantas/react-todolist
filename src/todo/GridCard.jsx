@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import SearchField from '../components/SearchField';
 
-class TodoGrid extends Component {
+class GridCard extends Component {
   render() {
     return (
       <div>
@@ -12,4 +12,4 @@ class TodoGrid extends Component {
   }
 }
 
-export default TodoGrid;
+export default GridCard;

@@ -5,7 +5,7 @@ import './index.css';
 
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import TodoGrid from './todo/TodoGrid';
+import TodoGrid from './todo/GridCard';
 
 
 // Método que renderiza os componentes do React no `index.html`
