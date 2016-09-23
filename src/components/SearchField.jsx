@@ -8,7 +8,8 @@ import './SearchField.css';
 class SearchField extends Component {
 
 
-  onKeyUpHandle(e) {
+  handleKeyUp(e) {
+
     var searchValue = this.refs.textInput.value;
 
     this.props.handleSearch(searchValue);
@@ -25,7 +26,7 @@ class SearchField extends Component {
         <input
           ref="textInput"
           type="search"
-          onKeyUp={this.onKeyUpHandle.bind(this)}
+          onKeyUp={this.handleKeyUp.bind(this)}
           placeholder={this.props.placeholder} />
       </form>
     );
