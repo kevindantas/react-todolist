@@ -7,9 +7,9 @@ class Card extends Component {
   render() {
     return (
       <div className="Card">
-        <h2>Teste</h2>
+        <h2>{ this.props.todo.titulo }</h2>
 
-        <List />
+        <List itens={this.props.todo.itens} />
       </div>
     );
   }

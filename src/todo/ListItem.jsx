@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 
 class ListItem extends Component {
@@ -7,7 +7,7 @@ class ListItem extends Component {
       <li>
         <label>
           <input type="checkbox"/>
-          Label qualquer
+          { this.props.item.descricao }
         </label>
 
       </li>
@@ -16,3 +16,7 @@ class ListItem extends Component {
 }
 
 export default ListItem;
+
+ListItem.propTypes = {
+  item: PropTypes.object.isRequired
+};
