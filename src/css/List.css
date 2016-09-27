@@ -4,3 +4,8 @@
     list-style: none;
     text-align: left;
 }
+
+.list-item.is-done {
+    text-decoration: line-through;
+    color: #8fca8b;
+}
