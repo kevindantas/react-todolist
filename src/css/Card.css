@@ -19,6 +19,6 @@
 
 /** Animação no Hover do mouse sobre o Card **/
 .Card:hover {
-    box-shadow: 0 7px 13px rgba(0,0,0,.2);
-    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0,0,0,.2);
+    transform: translateY(-2px);
 }
