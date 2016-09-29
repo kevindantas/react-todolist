@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import Card from './Card';
 
 import SearchField from '../components/SearchField';
+import AddTodo from './AddTodo';
 
 class GridCard extends Component {
 
@@ -100,6 +101,8 @@ class GridCard extends Component {
 
         { this.renderCards() }
 
+
+        <AddTodo />
       </div>
     );
   }

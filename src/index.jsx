@@ -6,6 +6,10 @@ import './index.css';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 import TodoGrid from './todo/GridCard';
+import injectTapEventPlugin from 'react-tap-event-plugin';
+
+injectTapEventPlugin();
+
 
 
 // Método que renderiza os componentes do React no `index.html`

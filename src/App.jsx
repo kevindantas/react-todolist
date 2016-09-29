@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Menu from './components/Menu';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 
 
 /**
@@ -14,12 +16,14 @@ class App extends Component {
    */
   render() {
     return (
-      <div className="App">
-        <Menu />
-        <main>
-          { this.props.children }
-        </main>
-      </div>
+      <MuiThemeProvider>
+        <div className="App">
+          <Menu />
+          <main>
+            { this.props.children }
+          </main>
+        </div>
+      </MuiThemeProvider>
     );
   }
 }
