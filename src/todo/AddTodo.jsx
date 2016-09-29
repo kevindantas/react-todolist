@@ -54,12 +54,12 @@ class AddTodo extends Component {
     const actions = [
       <FlatButton
         label="Cancelar"
-        onTouchTap={this.handleClose}
+        onClick={this.handleClose}
         />,
       <RaisedButton
         label="Cadastrar"
         primary={true}
-        onTouchTap={this.handleSubmit}
+        onClick={this.handleSubmit}
       />
     ];
 
