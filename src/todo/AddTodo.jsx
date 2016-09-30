@@ -60,6 +60,7 @@ class AddTodo extends Component {
         label="Cadastrar"
         primary={true}
         onClick={this.handleSubmit}
+        icon={<AddIcon />}
       />
     ];
 
@@ -79,18 +80,21 @@ class AddTodo extends Component {
 
         <Dialog
           title="Cadastrar novo To Do"
-          modal={true}
+          autoScrollBodyContent={true}
           open={this.state.dialogOpen}
           actions={actions}
           onRequestClose={this.handleClose}>
 
-          <form>
+          <form style={{
+            height: 350
+          }}>
             <TextField
+              ref="titulo"
               name="tituloTodo"
               fullWidth={true}
               floatingLabelText="Título do To Do" />
 
-            <AddTarefas />
+            <AddTarefas ref="tarefas" />
           </form>
 
         </Dialog>
