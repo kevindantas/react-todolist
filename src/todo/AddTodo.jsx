@@ -43,9 +43,24 @@ class AddTodo extends Component {
 
 
   handleSubmit() {
-    this.setState({
-      dialogOpen: false
-    })
+
+
+    var todoForm = {
+      titulo: this.refs.titulo.getValue(),
+      tarefas: this.refs.tarefas.getDescricoes()
+    };
+
+    fetch('https://private-00cf6-reacttodo.apiary-mock.com/lista', { method: 'POST'})
+      .then(response => response.json())
+      .then(response => {
+
+        this.props.handleAdd(response);
+        this.setState({
+          dialogOpen: false
+        })
+      });
+
+
   }
 
 

@@ -8,9 +8,11 @@ class TarefaInput extends Component {
     super();
 
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleChange = this.handleChange.bind(this);
 
     this.state = {
-      touched: false
+      touched: false,
+      descricao: null
     }
   }
 
@@ -21,6 +23,12 @@ class TarefaInput extends Component {
     });
 
     this.props.addInput();
+  }
+
+  handleChange(e) {
+    this.setState({
+      descricao: e.target.value
+    });
   }
 
 
@@ -34,7 +42,7 @@ class TarefaInput extends Component {
     return (
       <div>
         <TextField
-          ref="input"
+          onChange={this.handleChange}
           onKeyDown={eventKeyDown}
           hintText="Adicionar tarefa..." />
       </div>

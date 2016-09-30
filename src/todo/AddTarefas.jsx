@@ -24,6 +24,20 @@ class AddTarefas extends Component {
   }
 
 
+  getDescricoes() {
+    var descricoes = [];
+    
+    for(var i in this.refs) {
+      descricoes.push(this.refs[i].state.descricao)
+    }
+
+    descricoes = descricoes.filter((value) => value);
+
+
+    return descricoes;
+  }
+
+
 
   renderTarefas() {
     return this.state.tarefas.map((tarefa, i) => (

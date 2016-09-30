@@ -19,6 +19,8 @@ class GridCard extends Component {
       todos:  null,
       search: ''
     }
+
+    this.addTodo = this.addTodo.bind(this);
   }
 
 
@@ -92,6 +94,15 @@ class GridCard extends Component {
   }
 
 
+  addTodo(data) {
+    this.state.todos.push(data);
+
+    this.setState({
+      todos: this.state.todos
+    })
+  }
+
+
   render() {
     return (
       <div>
@@ -102,7 +113,7 @@ class GridCard extends Component {
         { this.renderCards() }
 
 
-        <AddTodo />
+        <AddTodo handleAdd={this.addTodo} />
       </div>
     );
   }
