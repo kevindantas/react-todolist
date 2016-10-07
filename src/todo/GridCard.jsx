@@ -89,7 +89,7 @@ class GridCard extends Component {
     fetch('https://private-00cf6-reacttodo.apiary-mock.com/lista')
       .then(response => response.json())
       .then(response => this.setState({
-            todos: response.concat(response).concat(response).concat(response).concat(response)
+            todos: response
       }));
   }
 
