@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
+import Checkbox from 'material-ui/Checkbox';
 
 class ListItem extends Component {
 
@@ -27,17 +28,26 @@ class ListItem extends Component {
 
 
   render() {
-    var classNames = `list-item `;
-    if(this.state.done)
-      classNames += 'is-done';
+
+    const isDoneStyle = {
+      textDecoration: 'line-through',
+      color: '#8fca8b'
+    }
+
+    const iconStyle = {
+      fill: '#8fca8b'
+    }
 
     return (
-      <li className={classNames}>
+      <li className="list-item">
         <label>
-          <input type="checkbox" defaultChecked={this.props.item.feito} onChange={this.checkItem.bind(this)} />
-          { this.props.item.descricao }
+          <Checkbox 
+            iconStyle={this.state.done ? iconStyle: null}
+            labelStyle={this.state.done ? isDoneStyle : null}
+            label={this.props.item.descricao} 
+            defaultChecked={this.props.item.feito} 
+            onCheck={this.checkItem.bind(this)} />
         </label>
-
       </li>
     );
   }

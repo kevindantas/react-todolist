@@ -48,7 +48,7 @@ class GridCard extends Component {
 
     // Se o state.todos está null, então mostramos a mensagem de carregando
     if (!todoList) {
-      return (<h3 style={styleH3}>Carregando...</h3>); // return para a a função
+      return (<h3 className="showUp" style={styleH3}>Carregando...</h3>); // return para a a função
     }
 
 
@@ -70,12 +70,12 @@ class GridCard extends Component {
 
     // Se a quantidade de todos filtrados for menor que 1, mostra mensagem de não encontrado
     if (todoListFiltered < 1) {
-      return (<h3 style={styleH3}>Nenhum resultado encontrado!</h3>);
+      return (<h3 className="showUp" style={styleH3}>Nenhum resultado encontrado!</h3>);
     }
 
 
-    return todoListFiltered.map(todo => {
-      return <Card key={todo.id} todo={todo}/>
+    return todoListFiltered.map((todo, i) => {
+      return <Card key={i} todo={todo}/>
     });
   }
 
@@ -89,7 +89,7 @@ class GridCard extends Component {
     fetch('https://private-00cf6-reacttodo.apiary-mock.com/lista')
       .then(response => response.json())
       .then(response => this.setState({
-        todos: response
+            todos: response.concat(response).concat(response).concat(response).concat(response)
       }));
   }
 

@@ -1,31 +1,19 @@
 .Card {
-    background: #fff;
-    float: left;
-    width: 310px;
-    margin-left: 24px;
-    padding: 8px;
-    margin-bottom: 18px;
-    border-radius: 5px;
-    box-shadow: 0 2px 7px rgba(0,0,0,.15);
-    transition: 0.2s ease-in;
-    will-change: box-shadow, transform;
-    animation: showCard 0.2s ease-in;
+    will-change: transform;
 }
-
-.Card h2 {
-    margin: 0;
-    padding: 8px;
-}
-
 
 /** Animação no Hover do mouse sobre o Card **/
 .Card:hover {
-    box-shadow: 0 6px 20px rgba(0,0,0,.2);
     transform: translateY(-2px);
 }
 
 
-@keyframes showCard {
+.showUp {
+    will-change: box-shadow, transform;
+    animation: showUp 0.2s ease-in;
+}
+
+@keyframes showUp {
     0% {
         opacity: 0;
         transform: translateY(-15px);

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Menu from './components/Menu';
+import Navigation from './components/Navigation';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className="App">
-          <Menu />
+          <Navigation />
           <main>
             { this.props.children }
           </main>

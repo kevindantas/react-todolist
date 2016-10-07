@@ -6,6 +6,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import FAB from 'material-ui/FloatingActionButton';
 import AddIcon from 'material-ui/svg-icons/content/add';
+import Snackbar from 'material-ui/Snackbar';
 
 import AddTarefas from './AddTarefas';
 
@@ -18,21 +19,16 @@ class AddTodo extends Component {
 
     this.state = {
       dialogOpen: false,
+      snackbarOpen: false,
+      message: 'To Do criado com sucesso :D',
       tarefas: []
     };
 
 
-    this.handleOpen = this.handleOpen.bind(this);
     this.handleClose = this.handleClose.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-
-  handleOpen() {
-    this.setState({
-      dialogOpen: true
-    })
-  }
 
 
   handleClose() {
@@ -56,7 +52,8 @@ class AddTodo extends Component {
 
         this.props.handleAdd(response);
         this.setState({
-          dialogOpen: false
+          dialogOpen: false,
+          snackbarOpen: true
         })
       });
 
@@ -88,10 +85,9 @@ class AddTodo extends Component {
 
     return (
       <div>
-        <FAB style={FABStyle} onClick={this.handleOpen.bind(this)}>
+        <FAB style={FABStyle} onClick={ () => this.setState({dialogOpen: true }) }>
           <AddIcon />
         </FAB>
-
 
         <Dialog
           title="Cadastrar novo To Do"
@@ -100,9 +96,7 @@ class AddTodo extends Component {
           actions={actions}
           onRequestClose={this.handleClose}>
 
-          <form style={{
-            height: 350
-          }}>
+          <form style={{height: 350 }}>
             <TextField
               ref="titulo"
               name="tituloTodo"
@@ -113,6 +107,14 @@ class AddTodo extends Component {
           </form>
 
         </Dialog>
+
+        <Snackbar 
+          action="Desfazer"
+          autoHideDuration={3000}
+          message={this.state.message} 
+          open={this.state.snackbarOpen}
+          onActionTouchTap={() => this.setState({message: 'To Do desfeito'})}
+          onRequestClose={(snackbarOpen) => this.setState({snackbarOpen: false})} />
       </div>
     );
   }
