@@ -29,29 +29,29 @@ Essas são todas as funcionalidades que fizemos durante a aula, dividas por pass
 Para mudar de a branch atual do projeto usar o comando: `git checkout NOME_DA_BRANCH`
 
 
-##### add-router
+##### `add-router`
 Com o `react-router` adicionado no projeto e as rotas configuradas
 
-##### grid-card 
+##### `grid-card`
 Componentes para exibir o To Do estáticos
 
-##### grid-card-fetch
+##### `grid-card-fetch`
  Dados dos To Dos vindo de uma API externa
 
-##### search-cards
+##### `search-cards`
 Pesquisa dos cards pelo título funcionando
 
-##### check-item
+##### `check-item`
 Clicando em um item faz com que ele fique concluído
 
-##### add-todo-static
+##### `add-todo-static`
 Criando a interface estática da modal para adicionar um novo To Do
 
-##### add-todo
+##### `add-todo`
 Interface com os eventos (onKeyDown, onClick) criados
 
-##### add-todo-api
+##### `add-todo-api`
 Enviando os dados para a API
 
-##### material-ui (Bônus)
+##### `material-ui` (Bônus)
 To Do list feito inteiro com o Material-UI
