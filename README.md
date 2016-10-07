@@ -24,6 +24,11 @@ Marca uma tarefa (item) como feita
 
 ## Branches
 
+Essas são todas as funcionalidades que fizemos durante a aula, dividas por passos caso alguém queira acompanhar a passo-a-passo que fizemos.
+
+Para mudar de a branch atual do projeto usar o comando: `git checkout NOME_DA_BRANCH`
+
+
 ##### add-router
 Com o `react-router` adicionado no projeto e as rotas configuradas
 
@@ -47,3 +52,6 @@ Interface com os eventos (onKeyDown, onClick) criados
 
 ##### add-todo-api
 Enviando os dados para a API
+
+##### material-ui (Bônus)
+To Do list feito inteiro com o Material-UI
